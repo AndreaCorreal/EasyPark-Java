@@ -1,0 +1,17 @@
+<footer class="page-footer footer-easypark">
+    <div class="footer-copyright">
+        <div class="container center-align">
+            Easy Park © 2026 - Sistema de Gestión de Parqueaderos.
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript de Materialize: hace que las etiquetas de los campos suban al escribir -->
+<script src="<%= ctx %>/materialize/js/materialize.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        M.updateTextFields();
+        // Por si el navegador autocompleta los campos (correo y contraseña guardados)
+        setTimeout(function () { M.updateTextFields(); }, 300);
+    });
+</script>

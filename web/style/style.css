@@ -1,0 +1,492 @@
+/* =========================================
+   Easy Park - Hoja de estilos
+   ========================================= */
+
+/* Colores del proyecto */
+:root{
+    --verde-oscuro: #1b5e20;
+    --verde: #2e7d32;
+    --verde-claro: #e8f5e9;
+    --fondo: #f4f6f5;
+    --texto: #37474f;
+}
+
+html,
+body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background: var(--fondo);
+    color: var(--texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
+.contenido{
+    padding: 40px 0;
+}
+
+.font-bold{
+    font-weight: 700;
+}
+
+.verde{
+    color: var(--verde);
+}
+
+.mb-0{
+    margin-bottom: 0;
+}
+
+/* ---------- Barra de navegación ---------- */
+.nav-easypark{
+    background: var(--verde-oscuro);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-easypark .brand-logo{
+    position: absolute;
+    left: 20px !important;
+    transform: none !important;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.nav-easypark .brand-logo i{
+    margin-right: 8px;
+}
+
+.nav-easypark ul.right{
+    margin-right: 10px;
+}
+
+.nav-easypark ul li.active{
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ---------- Pie de página ---------- */
+.footer-easypark{
+    background: var(--verde-oscuro);
+    padding-top: 0;
+}
+
+/* ---------- Botones ---------- */
+.btn-verde{
+    background: var(--verde);
+    border-radius: 8px;
+}
+
+.btn-verde:hover,
+.btn-verde:focus{
+    background: var(--verde-oscuro);
+}
+
+.btn-borde{
+    border: 2px solid var(--verde);
+    border-radius: 8px;
+    color: var(--verde);
+}
+
+.botones{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.botones.right-align{
+    justify-content: flex-end;
+}
+
+/* ---------- Títulos de sección ---------- */
+.titulo-seccion{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.titulo-seccion > i{
+    background: var(--verde);
+    color: white;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 32px;
+}
+
+.titulo-seccion h5{
+    margin: 0;
+    color: var(--verde-oscuro);
+}
+
+.titulo-seccion p{
+    margin: 4px 0 0;
+    color: #78909c;
+}
+
+/* ---------- Inicio de sesión ---------- */
+.page-content{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.login-page{
+    background-image: url('../img/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.login-card{
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.btn-login{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.ml-10{
+    margin-left: 10px;
+}
+
+/* ---------- Página principal ---------- */
+.bienvenida{
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.bienvenida-texto{
+    padding: 40px !important;
+}
+
+.bienvenida-texto h2{
+    margin: 10px 0 20px;
+    color: var(--verde-oscuro);
+}
+
+.etiqueta{
+    display: inline-block;
+    background: var(--verde-claro);
+    color: var(--verde);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.objetivo{
+    display: flex;
+    gap: 12px;
+    background: var(--verde-claro);
+    border-left: 5px solid var(--verde);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.objetivo i{
+    color: var(--verde);
+}
+
+.objetivo h6{
+    margin: 0 0 5px;
+    color: var(--verde-oscuro);
+}
+
+.objetivo p{
+    margin: 0;
+}
+
+.bienvenida-sena{
+    background: var(--verde-claro);
+    padding: 40px 20px !important;
+    min-height: 100%;
+}
+
+.logo-sena{
+    max-width: 200px;
+    margin-bottom: 15px;
+}
+
+.bienvenida-sena p{
+    margin: 6px 0;
+}
+
+.lema{
+    color: var(--verde);
+    font-style: italic;
+}
+
+/* ---------- Registro de usuarios ---------- */
+.formulario{
+    max-width: 850px;
+    margin: 0 auto;
+    border-radius: 16px;
+}
+
+.formulario .card-content{
+    padding: 35px;
+}
+
+.formulario .titulo-seccion{
+    border-bottom: 2px solid var(--verde-claro);
+    padding-bottom: 20px;
+}
+
+.input-field input:focus + label,
+.input-field .prefix.active{
+    color: var(--verde) !important;
+}
+
+.input-field input:focus{
+    border-bottom: 1px solid var(--verde) !important;
+    box-shadow: 0 1px 0 0 var(--verde) !important;
+}
+
+.campo-rol{
+    margin-top: 1rem;
+}
+
+.campo-rol select{
+    border-radius: 8px;
+    border: 1px solid #b0bec5;
+    height: 45px;
+    margin-top: 5px;
+}
+
+/* ---------- Panel de módulos ---------- */
+.card-modulo{
+    border-radius: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-modulo:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-modulo .card-content{
+    min-height: 250px;
+    padding: 30px 20px;
+}
+
+.icono-modulo{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: var(--verde-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono-modulo i{
+    font-size: 42px;
+    color: var(--verde);
+}
+
+.card-modulo .card-title{
+    color: var(--verde-oscuro);
+    font-weight: 600;
+}
+
+.enlace-modulo{
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 12px;
+    color: var(--verde);
+    font-weight: 600;
+}
+
+/* Filas con columnas de la misma altura */
+.grid-modulos,
+.fila-bienvenida{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-modulos > .col{
+    display: flex;
+}
+
+.grid-modulos .card-modulo{
+    width: 100%;
+}
+
+/* Tamaño del logo del SENA en la página principal */
+.bienvenida-sena .logo-sena{
+    max-width: 180px !important;
+    width: 180px;
+}
+
+/* Sección "Sobre Easy Park" */
+.sobre-easypark{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sobre-easypark h5{
+    color: var(--verde-oscuro);
+}
+
+.sobre-easypark p{
+    max-width: 750px;
+    margin: 10px auto 0;
+    font-size: 1.1rem;
+}
+
+/* ===================================================
+   Estilos de la aplicación web (JSP)
+   =================================================== */
+
+/* Mensajes que envían los servlets */
+.mensaje{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 10px 0 20px;
+    font-weight: 500;
+}
+
+.mensaje-exito{
+    background: var(--verde-claro);
+    color: var(--verde-oscuro);
+    border-left: 5px solid var(--verde);
+}
+
+.mensaje-error{
+    background: #ffebee;
+    color: #b71c1c;
+    border-left: 5px solid #e53935;
+}
+
+/* Nombre del usuario en la barra de navegación */
+.usuario-nav{
+    padding: 0 15px;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* Inicio de sesión */
+.enlaces-login{
+    display: flex;
+    justify-content: space-between;
+}
+
+.enlaces-login a{
+    margin-right: 0 !important;
+}
+
+.formulario-pequeno{
+    max-width: 550px;
+}
+
+/* La placa siempre se ve en mayúsculas */
+.mayusculas{
+    text-transform: uppercase;
+}
+
+/* Tablas */
+.tabla-easypark th{
+    color: var(--verde-oscuro);
+}
+
+.total-resultados{
+    color: #78909c;
+    margin-bottom: 10px;
+}
+
+/* Búsqueda */
+.form-busqueda .botones{
+    margin-top: 0;
+}
+
+/* Módulos que todavía no están desarrollados */
+.modulo-pendiente{
+    opacity: 0.7;
+}
+
+.etiqueta-pendiente{
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: #eceff1;
+    color: #607d8b;
+    font-size: 0.85rem;
+}
+
+/* Textos de apoyo */
+.nota{
+    color: #78909c;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+.sin-datos{
+    color: #78909c;
+    font-style: italic;
+    padding: 15px 0;
+}
+
+.saludo{
+    font-size: 1.15rem;
+}
+
+.ancho-completo{
+    width: 100%;
+}
+
+/* Logo del SENA */
+.bienvenida-sena .logo-sena{
+    max-width: 180px !important;
+    width: 180px;
+}
+
+/* Nombre del sistema en la página de inicio de sesión */
+.marca-login{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.marca-login i{
+    font-size: 70px;
+    color: var(--verde);
+}
+
+.marca-login h4{
+    margin: 0;
+    color: var(--verde);
+}
+
+.marca-login p{
+    margin: 0;
+}
+
+/* Si la tabla no cabe en pantalla, se desplaza hacia el lado */
+.tabla-scroll{
+    overflow-x: auto;
+}
+
+/* Botón que aparece cuando la placa de la entrada no está registrada */
+.boton-registrar-placa{
+    margin-bottom: 20px;
+}

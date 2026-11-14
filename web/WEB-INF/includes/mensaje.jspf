@@ -1,0 +1,14 @@
+<%
+    // Muestra el mensaje que envía el servlet con request.setAttribute("mensaje", ...)
+    Object mensajeServlet = request.getAttribute("mensaje");
+    Object exitoServlet = request.getAttribute("exito");
+    if (mensajeServlet != null) {
+        boolean esExito = exitoServlet != null && (Boolean) exitoServlet;
+%>
+<div class="mensaje <%= esExito ? "mensaje-exito" : "mensaje-error" %>">
+    <i class="material-icons"><%= esExito ? "check_circle" : "error" %></i>
+    <span><%= Seguridad.escaparHtml(mensajeServlet) %></span>
+</div>
+<%
+    }
+%>

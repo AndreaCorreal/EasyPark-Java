@@ -1,0 +1,14 @@
+<%@page contentType="text/html; charset=UTF-8"%>
+<%@page import="recursos.Seguridad"%>
+<%@page import="modelo.UsuarioBO"%>
+<%
+    // Ruta base del proyecto (por ejemplo /EasyPark). Se usa en todos los enlaces
+    // para que funcionen sin importar en qué carpeta esté la página.
+    String ctx = request.getContextPath();
+    UsuarioBO usuarioSesion = (UsuarioBO) session.getAttribute("usuarioLogueado");
+%>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="<%= ctx %>/materialize/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="<%= ctx %>/style/style.css">

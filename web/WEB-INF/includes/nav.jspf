@@ -1,0 +1,15 @@
+<nav class="nav-easypark">
+    <div class="nav-wrapper">
+        <a href="<%= ctx %>/principal.jsp" class="brand-logo"><i class="material-icons">directions_car</i>Easy Park</a>
+        <ul class="right">
+            <li><a href="<%= ctx %>/principal.jsp"><i class="material-icons left">home</i>Inicio</a></li>
+            <li><a href="<%= ctx %>/modulos.jsp"><i class="material-icons left">apps</i>Módulos</a></li>
+            <li><a href="<%= ctx %>/EntradaController"><i class="material-icons left">arrow_upward</i>Entradas</a></li>
+            <li class="usuario-nav">
+                <i class="material-icons left">account_circle</i>
+                <%= usuarioSesion != null ? Seguridad.escaparHtml(usuarioSesion.getNombre() + " (" + usuarioSesion.getRol() + ")") : "" %>
+            </li>
+            <li><a href="<%= ctx %>/AccesoController?accion=salir"><i class="material-icons left">logout</i>Cerrar sesión</a></li>
+        </ul>
+    </div>
+</nav>
