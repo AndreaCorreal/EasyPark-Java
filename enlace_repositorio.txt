@@ -1,0 +1,7 @@
+Evidencia GA7-220501096-AA2-EV02
+Modulos de software codificados y probados - Easy Park
+Aprendiz: Andrea Correal
+Ficha: 3186667
+
+Repositorio en GitHub:
+https://github.com/AndreaCorreal/EasyPark-Java
